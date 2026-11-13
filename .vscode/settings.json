@@ -1,0 +1,10 @@
+{
+    // VS Code only allows breakpoints in languages a debugger claims; this lets you click in .asm gutters.
+    "debug.allowBreakpointsEverywhere": true,
+    "files.exclude": {
+        "build/**/*.o": true
+    },
+    "remote.extensionKind": {
+        "ms-vscode.cpptools": ["workspace"]
+    }
+}

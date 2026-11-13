@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": "mkdir -p \"${workspaceFolder}/build\" && nasm -f elf64 -g -F dwarf \"${file}\" -o \"${workspaceFolder}/build/${fileBasenameNoExtension}.o\" && ld -m elf_x86_64 \"${workspaceFolder}/build/${fileBasenameNoExtension}.o\" -o \"${workspaceFolder}/build/${fileBasenameNoExtension}\"",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
